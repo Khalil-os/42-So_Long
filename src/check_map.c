@@ -101,4 +101,5 @@ void	check_map(t_game *game)
 		error_exit(game, "Error: Invalid map\n", 0);
 	if (!is_valid_char(game))
 		error_exit(game, "Error: Invalid map\n", 0);
+	flood_fill(game);
 }
