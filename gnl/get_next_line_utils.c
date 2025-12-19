@@ -6,21 +6,11 @@
 /*   By: kriad <kriad@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 17:27:49 by kriad             #+#    #+#             */
-/*   Updated: 2025/11/24 17:27:50 by kriad            ###   ########.fr       */
+/*   Updated: 2025/12/19 23:56:10 by kriad            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -64,28 +54,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	sub[i] = '\0';
 	return (sub);
-}
-
-char	*ft_strdup(const char *s1)
-{
-	unsigned int	i;
-	unsigned int	len;
-	char			*copy;
-
-	len = 0;
-	while (s1[len])
-		len++;
-	copy = (char *)malloc(sizeof(char) * (len + 1));
-	if (!copy)
-		return (NULL);
-	i = 0;
-	while (i < len)
-	{
-		copy[i] = s1[i];
-		i++;
-	}
-	copy[i] = '\0';
-	return (copy);
 }
 
 char	*ft_strjoin(char const *s1, char const *s2)
