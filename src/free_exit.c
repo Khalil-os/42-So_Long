@@ -30,9 +30,12 @@ static void	free_game(t_game *game)
 	}
 }
 
-void	error_exit(t_game *game, char *msg)
+void	error_exit(t_game *game, char *msg, int use_perror)
 {
 	free_game(game);
-	perror(msg);
+	if (use_perror)
+		perror("Error");
+	else if (msg)
+		ft_putstr_fd(msg, 2);
 	exit(1);
 }

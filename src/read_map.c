@@ -9,7 +9,7 @@ static void	malloc_map(t_game *game, char *file)
 	count = 0;
 	fd = open(file, O_RDONLY);
 	if (fd == -1)
-		error_exit(game, "Error");
+		error_exit(game, NULL, 1);
 	line = get_next_line(fd);
 	while (line)
 	{
@@ -20,7 +20,7 @@ static void	malloc_map(t_game *game, char *file)
 	game->map_height = count;
 	game->map = malloc(sizeof(char *) * (game->map_height + 1));
 	if (!game->map)
-		error_exit(game,"Error");
+		error_exit(game, NULL, 1);
 	close(fd);
 }
 
@@ -34,7 +34,7 @@ void	read_map(t_game *game, char *file)
 	malloc_map(game, file);
 	fd = open(file,O_RDONLY);
 	if (fd == -1)
-		error_exit(game,"Error");
+		error_exit(game, NULL, 1);
 	i = 0;
 	line = get_next_line(fd);
 	while (line)
@@ -48,6 +48,7 @@ void	read_map(t_game *game, char *file)
 	game->map[i] = NULL;
 	if (game->map[0])
 		game->map_width = ft_strlen(game->map[0]);
+	else game->map_width = 0;
 	close(fd);
 	return ;
 }
