@@ -27,5 +27,6 @@ int main(int argc, char** argv)
 	);
 	if (!game->win)
     	error_exit(game, "Error: window init failed\n", 0);
+	load_images(game);
 	mlx_loop(game->mlx);
 }
