@@ -45,9 +45,11 @@ void	check_map(t_game *game);
 void	flood_fill(t_game *game);
 
 void	load_images(t_game *game);
+void	draw_map(t_game *game);
 
 int		key_hook(int keycode, t_game *game);
 void	move_player(t_game *game, int new_x, int new_y);
 
+void	free_game(t_game *game);
 void	error_exit(t_game *game, char *msg, int use_perror);
 #endif

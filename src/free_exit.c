@@ -1,6 +1,6 @@
 #include "../so_long.h"
 
-static void	free_game(t_game *game)
+void	free_game(t_game *game)
 {
 	int	i;
 
