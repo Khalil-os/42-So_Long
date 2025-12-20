@@ -34,5 +34,5 @@ void	move_player(t_game *game, int new_x, int new_y)
 	game->player_x = new_x;
 	game->player_y = new_y;
 	game->moves++;
-	ft_printf("Move : %d", game->moves);
+	ft_printf("Move : %d\n", game->moves);
 }
