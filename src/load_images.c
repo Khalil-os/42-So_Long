@@ -47,15 +47,15 @@ void	load_images(t_game *game)
 	int	h;
 
 	game->img_wall = mlx_xpm_file_to_image(game->mlx,
-		"textures/wall.xpm", &w, &h);
+		"../textures/wall.xpm", &w, &h);
 	game->img_floor = mlx_xpm_file_to_image(game->mlx,
-		"textures/floor.xpm", &w, &h);
+		"../textures/floor.xpm", &w, &h);
 	game->img_player = mlx_xpm_file_to_image(game->mlx,
-		"textures/player.xpm", &w, &h);
+		"../textures/player.xpm", &w, &h);
 	game->img_exit = mlx_xpm_file_to_image(game->mlx,
-		"textures/exit.xpm", &w, &h);
+		"../textures/exit.xpm", &w, &h);
 	game->img_coin = mlx_xpm_file_to_image(game->mlx,
-		"textures/coin.xpm", &w, &h);
+		"../textures/coin.xpm", &w, &h);
 	if (!game->img_wall || !game->img_floor
 		|| !game->img_player || !game->img_exit
 		|| !game->img_coin)

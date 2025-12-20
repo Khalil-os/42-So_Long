@@ -11,7 +11,7 @@
 # include "ft_printf/ft_printf.h"
 # include "gnl/get_next_line.h"
 
-# define TILE_SIZE 64
+# define TILE_SIZE 32
 
 typedef struct s_game
 {
@@ -45,7 +45,6 @@ void	check_map(t_game *game);
 void	flood_fill(t_game *game);
 
 void	load_images(t_game *game);
-void	draw_map(t_game *game);
 
 int		key_hook(int keycode, t_game *game);
 void	move_player(t_game *game, int new_x, int new_y);
